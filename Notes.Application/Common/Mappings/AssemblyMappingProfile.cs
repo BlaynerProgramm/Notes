@@ -22,7 +22,7 @@ namespace Notes.Application.Common.Mappings
 			{
 				var instance = Activator.CreateInstance(type);
 				var methodInfo = type.GetMethod("Mapping");
-				methodInfo?.Invoke(instance, new[] { this });
+				methodInfo?.Invoke(instance, new object[] { this });
 			}
 		}
 	}
